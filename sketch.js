@@ -20,7 +20,7 @@ function preload() {
 
 
 function setup() {
-  createCanvas(600, 400);
+  createCanvas(windowWidth, 600);
   for (let i = 0; i < 40; i++) {
     let x = random(width);
     let y = random(height);
