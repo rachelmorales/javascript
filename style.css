@@ -44,3 +44,17 @@ header {
   font-size: 20px;
   text-align: center;
 }
+
+
+.data {
+  display: flex;
+  justify-content: center;
+  background-color: #d7d1de;
+  margin: 40px;
+  padding: 20px;
+}
+
+.data p {
+  font-size: 20px;
+  text-align: center;
+}
