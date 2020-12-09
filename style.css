@@ -1,13 +1,46 @@
 html, body {
   margin: 0;
   padding: 0;
+  background-color: #271f36;
 }
-canvas {
-  display: block;
-}
+
 
 header {
   display: flex;
   justify-content: center;
+  margin: 40px;
   padding: 20px;
+  background-color: #d7d1de;
+}
+
+
+.slide {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  background-color: #c2c2c2;
+  color: black;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+}
+
+
+.info {
+  display: flex;
+  justify-content: center;
+  background-color: #d7d1de;
+  margin: 40px;
+  padding: 20px;
+}
+
+.info p {
+  font-size: 20px;
+  text-align: center;
 }

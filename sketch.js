@@ -12,6 +12,8 @@ let bubbles = [];
 let germs = [];
 
 
+
+
 function preload() {
   for (let i = 0; i < 6; i++) {
     germs[i] = loadImage('images/germ' + i + '.png');
@@ -40,7 +42,7 @@ function mousePressed() {
 }
 
 function draw() {
-  background(200);
+  background(210);
   for (let i = 0; i < bubbles.length; i++) {
     if (bubbles[i].contains(mouseX, mouseY)) {
       bubbles[i].changeColor(255);
