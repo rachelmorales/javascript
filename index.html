@@ -1,57 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Chain</title>
-  <link rel="stylesheet" href="style.css">
-  <script type="text/javascript" src="paper-full.js"></script>
-  <script type="text/paperscript" canvas="canvas">
-    // Adapted from the following Processing example:
-        // http://processing.org/learning/topics/follow3.html
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
 
-        // The amount of points in the path:
-        var points = 20;
+  <script language="javascript" type="text/javascript" src="lib/p5.js"></script>
+  <script type="text/javascript" src="lib/p5.dom.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
 
-        // The distance between the points:
-        var length = 20;
-
-        var path = new Path({
-            strokeColor: '#e6d1ff',
-            strokeWidth: 20,
-            strokeCap: 'square'
-        });
-
-        var start = view.center / [10, 1];
-        for (var i = 0; i < points; i++)
-            path.add(start + new Point(i * length, 0));
-
-        function onMouseMove(event) {
-            path.firstSegment.point = event.point;
-            for (var i = 0; i < points - 1; i++) {
-                var segment = path.segments[i];
-                var nextSegment = segment.next;
-                var vector = segment.point - nextSegment.point;
-                vector.length = length;
-                nextSegment.point = segment.point - vector;
-            }
-            path.smooth({ type: 'continuous' });
-        }
-
-        function onMouseDown(event) {
-            path.fullySelected = true;
-            path.strokeColor = '#e6d1ff';
-        }
-
-        function onMouseUp(event) {
-            path.fullySelected = false;
-            path.strokeColor = '#e6d1ff';
-        }
-    </script>
 </head>
 
 <body>
-  <canvas id="canvas" resize></canvas>
+  <script src="sketch.js"></script>
 </body>
 
 </html>
