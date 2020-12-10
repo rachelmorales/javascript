@@ -14,9 +14,9 @@ let germs = []; // germ array
 
 
 
-function preload() {
+function preload() { //loading the images
   for (let i = 0; i < 6; i++) {
-    germs[i] = loadImage('images/germ' + i + '.png');
+    germs[i] = loadImage('images/germ' + i + '.png'); // for loop to call all 6 images instead of writing them individualy 
   }
 }
 
@@ -35,7 +35,7 @@ function setup() {
 
 function mousePressed() { //check if the mouse is pressed and if it is delete
   for (let i = bubbles.length - 1; i >= 0; i--) {
-    if (bubbles[i].contains(mouseX, mouseY)) {
+    if (bubbles[i].contains(mouseX, mouseY)) { //is the point inside the object
       bubbles.splice(i, 1); //splice takes two arguments -index & how many- removes it from the array
     }
   }
@@ -81,6 +81,6 @@ class Bubble { // bubble class
   }
 
   show() {
-    image(this.germ, this.x, this.y, this.r, this.r); //r is radius
+    image(this.germ, this.x, this.y, this.r, this.r); //r is radius, drawing the images
   }
 }
