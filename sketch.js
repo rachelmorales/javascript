@@ -9,7 +9,7 @@
 
 let bubbles = [];
 
-let germs = [];
+let germs = []; // germ array
 
 
 
@@ -23,7 +23,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, 600);
-  for (let i = 0; i < 40; i++) {
+  for (let i = 0; i < 40; i++) { //adding how many bubbles
     let x = random(width);
     let y = random(height);
     let r = random(20, 60);
@@ -54,7 +54,7 @@ function draw() {
   }
 }
 
-class Bubble {
+class Bubble { // bubble class
   constructor(x, y, r, img) {
     this.x = x;
     this.y = y;
@@ -67,7 +67,7 @@ class Bubble {
   }
 
   contains(px, py) { //checking to see if the point is inside that bubble
-    let d = dist(px, py, this.x, this.y);
+    let d = dist(px, py, this.x, this.y); //distance function can tell if you are clicking inside the circle or outside
     if (d < this.r) {
       return true; //returns true or false
     } else {
@@ -81,6 +81,6 @@ class Bubble {
   }
 
   show() {
-    image(this.germ, this.x, this.y, this.r, this.r);
+    image(this.germ, this.x, this.y, this.r, this.r); //r is radius
   }
 }
