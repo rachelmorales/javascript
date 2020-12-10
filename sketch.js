@@ -29,14 +29,14 @@ function setup() {
     let r = random(20, 60);
     let germ = random(germs);
     let b = new Bubble(x, y, r, germ);
-    bubbles.push(b);
+    bubbles.push(b); //adds something to the end of the array
   }
 }
 
-function mousePressed() {
+function mousePressed() { //check if the mouse is pressed and if it is delete
   for (let i = bubbles.length - 1; i >= 0; i--) {
     if (bubbles[i].contains(mouseX, mouseY)) {
-      bubbles.splice(i, 1);
+      bubbles.splice(i, 1); //splice takes two arguments -index & how many- removes it from the array
     }
   }
 }
@@ -45,9 +45,9 @@ function draw() {
   background(210);
   for (let i = 0; i < bubbles.length; i++) {
     if (bubbles[i].contains(mouseX, mouseY)) {
-      bubbles[i].changeColor(255);
+      bubbles[i].changeColor(255); //changes color
     } else {
-      bubbles[i].changeColor(0);
+      bubbles[i].changeColor(0); //no color
     }
     bubbles[i].move();
     bubbles[i].show();
@@ -66,10 +66,10 @@ class Bubble {
     this.brightness = bright;
   }
 
-  contains(px, py) {
+  contains(px, py) { //checking to see if the point is inside that bubble
     let d = dist(px, py, this.x, this.y);
     if (d < this.r) {
-      return true;
+      return true; //returns true or false
     } else {
       return false;
     }
