@@ -13,10 +13,9 @@ let germs = []; // germ array
 
 
 
-
 function preload() { //loading the images
   for (let i = 0; i < 6; i++) {
-    germs[i] = loadImage('images/germ' + i + '.png'); // for loop to call all 6 images instead of writing them individualy 
+    germs[i] = loadImage('images/germ' + i + '.png'); // for loop to call all 6 images instead of writing them individualy
   }
 }
 
